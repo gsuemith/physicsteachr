@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static', filename='img/intro.jpg') }}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Study Smart</span>
+            <span class="section-heading-lower">Not Hard</span>
+          </h2>
+          <p class="mb-3">
+Garrick, or Mr. "Swimmeth" in the classroom, is a master at Science and Math and loves nothing more than to share his knowledge with any student. Whether it's learning for fun or getting a better grade, Garrick can help.
+          </p>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-primary btn-xl" href="#">Schedule a Session Today!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <div class="cta-inner text-center rounded">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">My Promise</span>
+              <span class="section-heading-lower">To You</span>
+            </h2>
+            <p class="mb-0">
+I am determined to find the easiest way for you to reach your goals.  I always
+supplement, at no extra cost, going over past work or study guides before
+meeting with you to make the most out of every session.  Most physics and math
+courses still teach the same way as they did in the 1960s, but I apply recent research
+in Physics Education.  If relevant, emphasis will be given to computational tools
+and programming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock content %}
