@@ -12,13 +12,13 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route("/products")
-def products():
-    return render_template('products.html')
+@app.route("/services")
+def services():
+    return render_template('services.html')
 
-@app.route("/store")
-def store():
-    return render_template('store.html')
+@app.route("/tutoring")
+def tutoring():
+    return render_template('tutoring.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
