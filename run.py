@@ -20,5 +20,9 @@ def services():
 def tutoring():
     return render_template('tutoring.html')
 
+@app.route("/landing")
+def landing():
+    return render_template('landing.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
