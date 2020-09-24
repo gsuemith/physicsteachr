@@ -36,7 +36,16 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
+        <li class="{{ 'nav-item active px-lg-4' if request.path == url_for('home') else 'nav-item px-lg-4' }}">
+          <a class="nav-link text-uppercase text-expanded" href="{{ url_for('landing') }}">Quiz
 
+          </a>
+        </li>
+        <li class="{{ 'nav-item active px-lg-4' if request.path == url_for('home') else 'nav-item px-lg-4' }}">
+          <a class="nav-link text-uppercase text-expanded" href="{{ url_for('landing') }}">Guide
+
+          </a>
+        </li>
       </ul>
     </div>
   </div>
@@ -71,7 +80,7 @@ classroom.  It has nothing to do with how smart you are or your learning style.
 The secret? One orientation makes physics a lot EASIER.
         </p>
         <h2 class="section-heading mb-4">
-          <span class="section-heading-upper">Find out your orientation</span>
+          <span class="section-heading-upper">Reorientation</span>
         </h2>
         <p class="mb-3">
 Click below to take the FREE quiz and I will send you a personalized evaluation
