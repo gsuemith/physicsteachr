@@ -24,5 +24,9 @@ def tutoring():
 def landing():
     return render_template('landing.html')
 
+@app.route("/landing02")
+def landing02():
+    return render_template('landing02.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
