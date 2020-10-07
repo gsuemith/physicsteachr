@@ -20,54 +20,68 @@
   <!-- Custom styles for this template -->
   <link href="{{ url_for('static', filename='css/business-casual.min.css') }}" rel="stylesheet">
 
-  <style>
-  body {
-    font-family: 'Lora';
-    background-image: linear-gradient(rgba(47, 23, 15, 0.95), rgba(47, 23, 15, 0.95)), url("../static/img/bg.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-  }
-  </style>
-
 </head>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{{ url_for('home') }}">Why is Physics so hard?</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav mx-auto">
+        <li class="{{ 'nav-item active px-lg-4' if request.path == url_for('home') else 'nav-item px-lg-4' }}">
+          <a class="nav-link text-uppercase text-expanded" href="{{ url_for('landing') }}">Landing Page
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="{{ 'nav-item active px-lg-4' if request.path == url_for('home') else 'nav-item px-lg-4' }}">
+          <a class="nav-link text-uppercase text-expanded" href="{{ url_for('landing') }}">Quiz
+
+          </a>
+        </li>
+        <li class="{{ 'nav-item active px-lg-4' if request.path == url_for('home') else 'nav-item px-lg-4' }}">
+          <a class="nav-link text-uppercase text-expanded" href="{{ url_for('landing') }}">Guide
+
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <body>
 
-  <h1 class="site-heading text-center text-white d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">The simple brain hack to make physics</span>
-    <span class="site-heading-lower">a lot easier!</span>
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Why is physics</span>
+    <span class="site-heading-lower">so hard?</span>
   </h1>
 
   <section class="page-section clearfix">
   <div class="container">
     <div class="intro">
       <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ url_for('static', filename='img/stumped.jpg') }}" alt="">
-      <div class="intro-text left-0 text-center bg-faded p-3 mb-3 rounded">
-        <h2 class="section-heading mb-3">
+      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+        <h2 class="section-heading mb-4">
           <span class="section-heading-upper"><a href="#">What am I doing wrong?</span>
         </h2>
-        <p class="mb-4">
+        <p class="mb-3">
 My classmates all seem to get it.  The answers come to them instantly.  Did they
-read more or study longer?
+read more?  Did they study longer?
         </p>
-        <h2 class="section-heading mb-3 ">
+        <h2 class="section-heading mb-4">
           <span class="section-heading-upper">Science has an answer!</span>
         </h2>
-        <p class="mb-4">
+        <p class="mb-3">
 Research has shown there are two learning orientations that students bring to the
 classroom.  It has nothing to do with how smart you are or your learning style.
-The secret? One of the orientations makes physics a lot EASIER.
+The secret? One orientation makes physics a lot EASIER.
         </p>
-        <div class="intro-button mx-auto">
-          <a class="btn btn-primary btn-xl" href="#">Which one am I?</a>
-        </div>
-      </div>
-      <div class="intro-text-right left-0 text-center bg-faded p-3 rounded">
-        <h2 class="section-heading mb-3">
-          <span class="section-heading-upper">Reorient yourself</span>
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Reorientation</span>
         </h2>
-        <p class="mb-4">
+        <p class="mb-3">
 Click below to take the FREE quiz and I will send you a personalized evaluation
 of your learning orientation and a FREE guide to having the EASIER orientation.
         </p>
@@ -85,71 +99,6 @@ of your learning orientation and a FREE guide to having the EASIER orientation.
 {% block content %}{% endblock content %}
 
 
-<section class="page-section about-heading">
-  <div class="container">
-    <div class="about-heading-content">
-      <div class="row">
-        <div class="col-xl-8 col-lg-9 mr-auto">
-          <div class="bg-faded rounded p-4 my-3">
-            <p class="pb-2">
-Mr. Suemith made physics fun and interesting.  He not only taught us to solve problems
-to get the right answer but to think about what is actually going on in a deeper way.
-Mr. Suemith helped me appreciate physics and I highly recommend him as a teacher.
-             </p>
-             <h2 class="section-heading mb-1">
-               <span class="section-heading-lower">-Mark Brown</span>
-               <span class="section-heading-upper">Bishop O'Connell High School Student</span>
-           </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="about-heading-content">
-      <div class="row">
-        <div class="col-xl-8 col-lg-9 ml-auto">
-          <div class="bg-faded rounded p-4 mb-3">
-            <p class="pb-2">
-Garrick tutored our son privately in precalculus and calculus for several years.
-He was patient, caring, and knowledgeable throughout.  Our son came to look forward
-to his sessions with Garrick each week and enjoyed it.  I can’t say enough good
-things about Garrick. He is a great tutor and even better person.
-             </p>
-             <h2 class="section-heading mb-1">
-               <span class="section-heading-lower">-Jim Valentino</span>
-               <span class="section-heading-upper">Parent from Falls Church, VA</span>
-           </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="about-heading-content">
-      <div class="row">
-        <div class="col-xl-9 col-lg-10 mx-auto">
-          <div class="bg-faded rounded p-4">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">15 years of teaching</span>
-              <span class="section-heading-lower">Lifetime Learner</span>
-          </h2>
-            <p>
-Garrick, or Mr. "Swim-myth" in the classroom, is a master at Science and Math and
-loves nothing more than to share his knowledge with any student. Whether it's
-learning for fun or getting a better grade, Garrick can help.
-             </p>
-             <div class="intro-button text-center">
-               <a class="btn btn-primary btn-xl" href="#">FREE Learning Guide</a>
-             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer class="footer text-faded text-center py-5">
   <div class="container">
